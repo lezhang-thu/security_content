@@ -9,8 +9,8 @@ train_iter, test_iter = load_data.load_data_fashion_mnist(batch_size)
 num_inputs = 784
 num_outputs = 10
 
-W = torch.normal(0, 0.01, size=(num_inputs, num_outputs))
-b = torch.zeros(num_outputs)
+W = torch.normal(0, 0.01, size=(num_inputs, num_outputs), requires_grad=False)
+b = torch.zeros(num_outputs, requires_grad=False)
 lr = 0.1
 
 
